@@ -1,5 +1,5 @@
 using Test
-include("../src/SimpleDebugger.jl")
+import SimpleDebugger
 
 struct S
     a::Int
