@@ -1,0 +1,4 @@
+name = "SimpleDebugger"
+uuid = "a7147ae0-f89c-11e8-0856-dfe1f24352a6"
+authors = ["Vitor Nesello <vitornesello@gmail.com>"]
+version = "0.1.0"
