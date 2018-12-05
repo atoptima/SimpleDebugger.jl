@@ -2,5 +2,4 @@
 A simple debugger for julia
 
 # Credits 
-Artur Pessoa
-@artalvpes
+Artur Pessoa: https://github.com/orgs/atoptima/people/artalvpes
