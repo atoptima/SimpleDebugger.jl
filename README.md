@@ -12,7 +12,7 @@ p \<expression\>
 
 Effect: evaluates an expression and prints the result.
 
-Note: only global variables can be accessed. Copy local variables to global to see their values.
+Note: only global variables can be accessed. Copy local variables (of any scope) to global to see their values.
   
 c [\<number of steps\>]
 
