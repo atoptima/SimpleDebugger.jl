@@ -22,13 +22,17 @@ macro bkp()
                         SimpleDebugger.set_count(Meta.parse(command[3:end])-1);
                     end
                     break;
-                end
-                if command[1] == 'p'
+                elseif command[1] == 'p'
                     v = command[3:end];
-                    println(eval(Meta.parse(v)));
-                end
-                if command[1] == 'q'
+                    try
+                        println(eval(Meta.parse(v)));
+                    catch err
+                        println(err);
+                    end
+                elseif command[1] == 'q'
                     error("User exit");
+                else
+                    println("Unrecognized SimpleDebugger command ", command[1])
                 end
             end
         end
