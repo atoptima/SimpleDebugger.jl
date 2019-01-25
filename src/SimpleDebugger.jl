@@ -12,10 +12,20 @@ macro bkp()
             t2 = SimpleDebugger.SimpleDebugger_count - 1;
             SimpleDebugger.set_count(t2);
         else
-            println("Debugging");
+            println("Debugging...")
             while true
                 command = readline();
-                if command[1] == 'c'
+                if length(command) == 0
+                    continue
+                end
+                if command[1] == 'h'
+                    println("SimpleDebugger help:")
+                    println("Commands are:")
+                    println("h -> help")
+                    println("p + <exp> -> print (or eval) epression <exp>")
+                    println("c + <number> -> skip <number> times the breakpoint is hit")
+                    println("q -> quit debugging with the stacktrace")
+                elseif command[1] == 'c'
                     if length(command) == 1
                         SimpleDebugger.set_count(typemax(Int));
                     else
